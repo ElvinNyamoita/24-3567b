@@ -2,112 +2,304 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Travel Assignment</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Explorer</title>
+
+    <link rel="stylesheet" href="style.css">
+
     <style>
         body {
+            margin: 0;
             font-family: Arial, sans-serif;
+            background-color: #064e3b;
+            color: white;
         }
-        mark {
-            background-color: yellow;
+
+        nav {
+            background-color: #022c22;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
         }
-        table, th, td {
-            border: 1px solid black;
-            border-collapse: collapse;
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
         }
-        th, td {
-            padding: 8px;
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: #a7f3d0;
+        }
+
+        .container {
+            width: 90%;
+            margin: auto;
+            padding: 20px;
             text-align: center;
         }
-        img {
-            width: 300px;
-            margin: 10px;
+
+        .image-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
         }
-        video {
-            width: 400px;
-            margin: 10px;
+
+        .image-box {
+            width: 250px;
+            height: 180px;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .image-box img {
+            width: 100%;
+            height: 100%;
+        }
+
+        table {
+            width: 90%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid white;
+            padding: 10px;
+        }
+
+        th {
+            background-color: #065f46;
+        }
+
+        ul, ol, dl {
+            text-align: left;
+            width: 60%;
+            margin: 20px auto;
+        }
+
+        .form-container {
+            width: 60%;
+            margin: 30px auto;
+            background-color: #065f46;
+            padding: 20px;
+            border-radius: 12px;
+        }
+
+        input, select {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: none;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #022c22;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        footer {
+            background-color: #022c22;
+            padding: 15px;
+            margin-top: 30px;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .image-section {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .form-container {
+                width: 90%;
+            }
+
+            table, ul, ol, dl {
+                width: 100%;
+            }
         }
     </style>
 </head>
+
 <body>
 
-<h2>Travel Assignment</h2>
+<nav>
+    <h2 style="color:#bbf7d0;">Travel Explorer</h2>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#destinations">Destinations</a></li>
+        <li><a href="#packages">Packages</a></li>
+        <li><a href="#booking">Booking</a></li>
+    </ul>
+</nav>
 
-<!-- PARAGRAPHS -->
-<p><b>Traveling helps people explore new destinations and understand different cultures.</b></p>
-<p><i>Visiting new places creates unforgettable memories and lifelong experiences.</i></p>
-<p><u>Proper planning makes every journey smooth and enjoyable.</u></p>
-<p>My next travel date is 15<sup>th</sup> December 2026.</p>
-<p>The recommended luggage weight is 20<sub>kg</sub> for international travel.</p>
-<p><del>Traveling is only for the rich</del> Traveling is for everyone.</p>
-<p><mark>Always keep your passport and tickets safe while traveling.</mark></p>
-<p>"Travel is the only thing you buy that makes you richer."</p>
+<div class="container">
 
-<blockquote>
-    Traveling teaches patience, tolerance, and appreciation of diversity.
-</blockquote>
+    <h1 style="color:#bbf7d0;">Explore The World With Us</h1>
+
+    <p>
+        Traveling gives you the opportunity to experience new cultures, discover breathtaking landscapes,
+        and enjoy unforgettable adventures. From luxurious beach resorts to exciting city tours,
+        we ensure your journey is comfortable, safe, and memorable.
+    </p>
+
+    <p>
+        Our travel agency offers carefully planned packages tailored to your needs. Whether you
+        love relaxation, adventure, or cultural exploration, we help you plan the perfect trip
+        with professional service and affordable prices.
+    </p>
+
+    <h2 id="destinations">Top Destinations</h2>
+
+    <div class="image-section">
+        <div class="image-box">
+            <img src="https://source.unsplash.com/400x300/?paris" alt="Paris">
+        </div>
+        <div class="image-box">
+            <img src="https://source.unsplash.com/400x300/?maldives" alt="Maldives">
+        </div>
+        <div class="image-box">
+            <img src="https://source.unsplash.com/400x300/?dubai" alt="Dubai">
+        </div>
+        <div class="image-box">
+            <img src="https://source.unsplash.com/400x300/?newyork" alt="New York">
+        </div>
+        <div class="image-box">
+            <img src="https://source.unsplash.com/400x300/?tokyo" alt="Tokyo">
+        </div>
+    </div>
+
+    <!-- UNORDERED LIST -->
+    <h2>Travel Essentials</h2>
+    <ul>
+        <li>Valid Passport</li>
+        <li>Travel Insurance</li>
+        <li>Comfortable Clothing</li>
+        <li>Camera & Power Bank</li>
+        <li>Travel Documents</li>
+    </ul>
+
+    <!-- ORDERED LIST -->
+    <h2>How to Plan Your Trip</h2>
+    <ol>
+        <li>Choose your destination</li>
+        <li>Compare travel packages</li>
+        <li>Book flights and hotels</li>
+        <li>Prepare travel documents</li>
+        <li>Pack and enjoy your journey</li>
+    </ol>
+
+    <!-- DESCRIPTION LIST -->
+    <h2>Package Types</h2>
+    <dl>
+        <dt><b>Standard Package</b></dt>
+        <dd>Affordable package including hotel and airport transfers.</dd>
+
+        <dt><b>Premium Package</b></dt>
+        <dd>Includes 5-star hotel, guided tours, and luxury transport.</dd>
+
+        <dt><b>Adventure Package</b></dt>
+        <dd>Best for hiking, safaris, and outdoor activities.</dd>
+    </dl>
+
+    <!-- TABLE 1 -->
+    <h2 id="packages">Travel Package Comparison</h2>
+    <table>
+        <tr>
+            <th>Destination</th>
+            <th>Duration</th>
+            <th>Hotel Rating</th>
+            <th>Price</th>
+        </tr>
+        <tr>
+            <td>Paris</td>
+            <td>5 Days</td>
+            <td>4 Star</td>
+            <td>$1200</td>
+        </tr>
+        <tr>
+            <td>Maldives</td>
+            <td>7 Days</td>
+            <td>5 Star</td>
+            <td>$2000</td>
+        </tr>
+        <tr>
+            <td>Dubai</td>
+            <td>4 Days</td>
+            <td>4 Star</td>
+            <td>$900</td>
+        </tr>
+    </table>
+
+    <!-- TABLE 2 -->
+    <h2>Sample 3-Day Itinerary</h2>
+    <table>
+        <tr>
+            <th>Day</th>
+            <th>Activity</th>
+        </tr>
+        <tr>
+            <td>Day 1</td>
+            <td>Arrival & City Tour</td>
+        </tr>
+        <tr>
+            <td>Day 2</td>
+            <td>Adventure & Sightseeing</td>
+        </tr>
+        <tr>
+            <td>Day 3</td>
+            <td>Shopping & Departure</td>
+        </tr>
+    </table>
+
+    <h2 id="booking">Book Your Trip</h2>
+
+    <div class="form-container">
+        <form>
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="Email Address" required>
+            <select required>
+                <option value="">Select Destination</option>
+                <option>Paris</option>
+                <option>Maldives</option>
+                <option>Dubai</option>
+            </select>
+            <input type="date" required>
+            <button type="submit">Book Now</button>
+        </form>
+    </div>
+
+</div>
 
 <footer>
-    <p>© 2026 Travel Assignment</p>
+    © 2026 Travel Explorer | Professional Travel Services
 </footer>
-
-<br><br><br><br>
-<hr><hr><hr>
-
-<!-- IMAGES -->
-<h3>Travel Destinations</h3>
-<img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Beach">
-<img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34" alt="Paris">
-
-<!-- VIDEO -->
-<h3>Travel Video</h3>
-<video controls>
-    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-</video>
-
-<!-- UNORDERED LIST -->
-<h3>Popular Travel Destinations (Unordered List)</h3>
-<ul>
-    <li>Paris</li>
-    <li>Nairobi</li>
-    <li>Tokyo</li>
-    <li>Rome</li>
-    <li>Cape Town</li>
-</ul>
-
-<!-- ORDERED LIST -->
-<h3>Travel Essentials (Ordered List)</h3>
-<ol>
-    <li>Passport</li>
-    <li>Visa</li>
-    <li>Travel Tickets</li>
-    <li>Clothes</li>
-    <li>Money</li>
-</ol>
-
-<!-- TABLE -->
-<h3>Travel Schedule</h3>
-<table>
-    <tr>
-        <th>Day</th>
-        <th>City</th>
-        <th>Hotel</th>
-        <th>Transport</th>
-        <th>Breakfast</th>
-        <th>Lunch</th>
-        <th>Dinner</th>
-        <th>Tour</th>
-        <th>Cost</th>
-        <th>Notes</th>
-    </tr>
-    <tr>
-        <td>1</td><td>Paris</td><td>Yes</td><td>Flight</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Eiffel Tower</td><td>$500</td><td>Sunny</td>
-    </tr>
-    <tr>
-        <td>2</td><td>Nairobi</td><td>Yes</td><td>Flight</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Safari</td><td>$400</td><td>Wildlife</td>
-    </tr>
-</table>
 
 </body>
 </html>
-
 
