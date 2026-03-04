@@ -5,10 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Travel Explorer</title>
 
-    <!-- External CSS -->
     <link rel="stylesheet" href="style.css">
 
-    <!-- Internal CSS -->
     <style>
         body {
             margin: 0;
@@ -17,7 +15,6 @@
             color: white;
         }
 
-        /* Navigation Bar */
         nav {
             background-color: #022c22;
             padding: 15px;
@@ -32,11 +29,6 @@
             list-style: none;
             display: flex;
             gap: 20px;
-            padding: 0;
-        }
-
-        nav ul li {
-            display: inline;
         }
 
         nav ul li a {
@@ -75,14 +67,9 @@
             height: 100%;
         }
 
-        .video-box {
-            margin: 20px auto;
-            width: 80%;
-        }
-
         table {
-            width: 80%;
-            margin: auto;
+            width: 90%;
+            margin: 20px auto;
             border-collapse: collapse;
         }
 
@@ -95,7 +82,12 @@
             background-color: #065f46;
         }
 
-        /* Booking Form */
+        ul, ol, dl {
+            text-align: left;
+            width: 60%;
+            margin: 20px auto;
+        }
+
         .form-container {
             width: 60%;
             margin: 30px auto;
@@ -121,18 +113,12 @@
             cursor: pointer;
         }
 
-        button:hover {
-            background-color: #0f766e;
-        }
-
         footer {
             background-color: #022c22;
             padding: 15px;
             margin-top: 30px;
-            text-align: center;
         }
 
-        /* Responsive Design */
         @media (max-width: 768px) {
             nav {
                 flex-direction: column;
@@ -153,7 +139,7 @@
                 width: 90%;
             }
 
-            table {
+            table, ul, ol, dl {
                 width: 100%;
             }
         }
@@ -162,14 +148,13 @@
 
 <body>
 
-<!-- Navigation -->
 <nav>
     <h2 style="color:#bbf7d0;">Travel Explorer</h2>
     <ul>
         <li><a href="#">Home</a></li>
         <li><a href="#destinations">Destinations</a></li>
+        <li><a href="#packages">Packages</a></li>
         <li><a href="#booking">Booking</a></li>
-        <li><a href="#videos">Videos</a></li>
     </ul>
 </nav>
 
@@ -178,18 +163,15 @@
     <h1 style="color:#bbf7d0;">Explore The World With Us</h1>
 
     <p>
-        Traveling is one of the most rewarding experiences in life. It allows you to discover 
-        new cultures, explore beautiful landscapes, and meet people from different backgrounds. 
-        From relaxing beach holidays to exciting city adventures, every journey creates memories 
-        that last a lifetime. Our travel services are designed to give you comfort, safety, and 
-        unforgettable experiences wherever you go.
+        Traveling gives you the opportunity to experience new cultures, discover breathtaking landscapes,
+        and enjoy unforgettable adventures. From luxurious beach resorts to exciting city tours,
+        we ensure your journey is comfortable, safe, and memorable.
     </p>
 
     <p>
-        Whether you dream of visiting tropical islands, historic cities, or modern skylines, 
-        we provide carefully planned travel packages to suit your needs. Our team ensures smooth 
-        booking, comfortable accommodation, and exciting activities throughout your trip. 
-        Start your adventure today and let us turn your travel dreams into reality.
+        Our travel agency offers carefully planned packages tailored to your needs. Whether you
+        love relaxation, adventure, or cultural exploration, we help you plan the perfect trip
+        with professional service and affordable prices.
     </p>
 
     <h2 id="destinations">Top Destinations</h2>
@@ -212,28 +194,86 @@
         </div>
     </div>
 
-    <h2>Travel Packages</h2>
+    <!-- UNORDERED LIST -->
+    <h2>Travel Essentials</h2>
+    <ul>
+        <li>Valid Passport</li>
+        <li>Travel Insurance</li>
+        <li>Comfortable Clothing</li>
+        <li>Camera & Power Bank</li>
+        <li>Travel Documents</li>
+    </ul>
 
+    <!-- ORDERED LIST -->
+    <h2>How to Plan Your Trip</h2>
+    <ol>
+        <li>Choose your destination</li>
+        <li>Compare travel packages</li>
+        <li>Book flights and hotels</li>
+        <li>Prepare travel documents</li>
+        <li>Pack and enjoy your journey</li>
+    </ol>
+
+    <!-- DESCRIPTION LIST -->
+    <h2>Package Types</h2>
+    <dl>
+        <dt><b>Standard Package</b></dt>
+        <dd>Affordable package including hotel and airport transfers.</dd>
+
+        <dt><b>Premium Package</b></dt>
+        <dd>Includes 5-star hotel, guided tours, and luxury transport.</dd>
+
+        <dt><b>Adventure Package</b></dt>
+        <dd>Best for hiking, safaris, and outdoor activities.</dd>
+    </dl>
+
+    <!-- TABLE 1 -->
+    <h2 id="packages">Travel Package Comparison</h2>
     <table>
         <tr>
             <th>Destination</th>
             <th>Duration</th>
+            <th>Hotel Rating</th>
             <th>Price</th>
         </tr>
         <tr>
             <td>Paris</td>
             <td>5 Days</td>
+            <td>4 Star</td>
             <td>$1200</td>
         </tr>
         <tr>
             <td>Maldives</td>
             <td>7 Days</td>
+            <td>5 Star</td>
             <td>$2000</td>
         </tr>
         <tr>
             <td>Dubai</td>
             <td>4 Days</td>
+            <td>4 Star</td>
             <td>$900</td>
+        </tr>
+    </table>
+
+    <!-- TABLE 2 -->
+    <h2>Sample 3-Day Itinerary</h2>
+    <table>
+        <tr>
+            <th>Day</th>
+            <th>Activity</th>
+        </tr>
+        <tr>
+            <td>Day 1</td>
+            <td>Arrival & City Tour</td>
+        </tr>
+        <tr>
+            <td>Day 2</td>
+            <td>Adventure & Sightseeing</td>
+        </tr>
+        <tr>
+            <td>Day 3</td>
+            <td>Shopping & Departure</td>
         </tr>
     </table>
 
@@ -254,24 +294,10 @@
         </form>
     </div>
 
-    <h2 id="videos">Travel Videos</h2>
-
-    <div class="video-box">
-        <iframe width="100%" height="315"
-        src="https://www.youtube.com/embed/5U3n4l3XkW0"
-        frameborder="0" allowfullscreen></iframe>
-    </div>
-
-    <div class="video-box">
-        <iframe width="100%" height="315"
-        src="https://www.youtube.com/embed/lJIrF4YjHfQ"
-        frameborder="0" allowfullscreen></iframe>
-    </div>
-
 </div>
 
 <footer>
-    © 2026 Travel Explorer | Designed for Professional Presentation
+    © 2026 Travel Explorer | Professional Travel Services
 </footer>
 
 </body>
