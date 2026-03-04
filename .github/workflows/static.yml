@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Explorer</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #064e3b;
+            color: white;
+        }
+
+        nav {
+            background-color: #022c22;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: #a7f3d0;
+        }
+
+        .container {
+            width: 90%;
+            margin: auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .image-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .image-box {
+            width: 250px;
+            height: 180px;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .image-box img {
+            width: 100%;
+            height: 100%;
+        }
+
+        table {
+            width: 90%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid white;
+            padding: 10px;
+        }
+
+        th {
+            background-color: #065f46;
+        }
+
+        ul, ol, dl {
+            text-align: left;
+            width: 60%;
+            margin: 20px auto;
+        }
+
+        .form-container {
+            width: 60%;
+            margin: 30px auto;
+            background-color: #065f46;
+            padding: 20px;
+            border-radius: 12px;
+        }
+
+        input, select {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: none;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #022c22;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        footer {
+            background-color: #022c22;
+            padding: 15px;
+            margin-top: 30px;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .image-section {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .form-container {
+                width: 90%;
+            }
+
+            table, ul, ol, dl {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<nav>
+    <h2 style="color:#bbf7d0;">Travel Explorer</h2>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#destinations">Destinations</a></li>
+        <li><a href="#packages">Packages</a></li>
+        <li><a href="#booking">Booking</a></li>
+    </ul>
+</nav>
+
+<div class="container">
+
+    <h1 style="color:#bbf7d0;">Explore The World With Us</h1>
+
+    <p>
+        Traveling gives you the opportunity to experience new cultures, discover breathtaking landscapes,
+        and enjoy unforgettable adventures. From luxurious beach resorts to exciting city tours,
+        we ensure your journey is comfortable, safe, and memorable.
+    </p>
+
+    <p>
+        Our travel agency offers carefully planned packages tailored to your needs. Whether you
+        love relaxation, adventure, or cultural exploration, we help you plan the perfect trip
+        with professional service and affordable prices.
+    </p>
+
+    <h2 id="destinations">Top Destinations</h2>
+
+    <div class="image-section">
+        <div class="image-box">
+            <img src="https://source.unsplash.com/400x300/?paris" alt="Paris">
+        </div>
+        <div class="image-box">
+            <img src="https://source.unsplash.com/400x300/?maldives" alt="Maldives">
+        </div>
+        <div class="image-box">
+            <img src="https://source.unsplash.com/400x300/?dubai" alt="Dubai">
+        </div>
+        <div class="image-box">
+            <img src="https://source.unsplash.com/400x300/?newyork" alt="New York">
+        </div>
+        <div class="image-box">
+            <img src="https://source.unsplash.com/400x300/?tokyo" alt="Tokyo">
+        </div>
+    </div>
+
+    <!-- UNORDERED LIST -->
+    <h2>Travel Essentials</h2>
+    <ul>
+        <li>Valid Passport</li>
+        <li>Travel Insurance</li>
+        <li>Comfortable Clothing</li>
+        <li>Camera & Power Bank</li>
+        <li>Travel Documents</li>
+    </ul>
+
+    <!-- ORDERED LIST -->
+    <h2>How to Plan Your Trip</h2>
+    <ol>
+        <li>Choose your destination</li>
+        <li>Compare travel packages</li>
+        <li>Book flights and hotels</li>
+        <li>Prepare travel documents</li>
+        <li>Pack and enjoy your journey</li>
+    </ol>
+
+    <!-- DESCRIPTION LIST -->
+    <h2>Package Types</h2>
+    <dl>
+        <dt><b>Standard Package</b></dt>
+        <dd>Affordable package including hotel and airport transfers.</dd>
+
+        <dt><b>Premium Package</b></dt>
+        <dd>Includes 5-star hotel, guided tours, and luxury transport.</dd>
+
+        <dt><b>Adventure Package</b></dt>
+        <dd>Best for hiking, safaris, and outdoor activities.</dd>
+    </dl>
+
+    <!-- TABLE 1 -->
+    <h2 id="packages">Travel Package Comparison</h2>
+    <table>
+        <tr>
+            <th>Destination</th>
+            <th>Duration</th>
+            <th>Hotel Rating</th>
+            <th>Price</th>
+        </tr>
+        <tr>
+            <td>Paris</td>
+            <td>5 Days</td>
+            <td>4 Star</td>
+            <td>$1200</td>
+        </tr>
+        <tr>
+            <td>Maldives</td>
+            <td>7 Days</td>
+            <td>5 Star</td>
+            <td>$2000</td>
+        </tr>
+        <tr>
+            <td>Dubai</td>
+            <td>4 Days</td>
+            <td>4 Star</td>
+            <td>$900</td>
+        </tr>
+    </table>
+
+    <!-- TABLE 2 -->
+    <h2>Sample 3-Day Itinerary</h2>
+    <table>
+        <tr>
+            <th>Day</th>
+            <th>Activity</th>
+        </tr>
+        <tr>
+            <td>Day 1</td>
+            <td>Arrival & City Tour</td>
+        </tr>
+        <tr>
+            <td>Day 2</td>
+            <td>Adventure & Sightseeing</td>
+        </tr>
+        <tr>
+            <td>Day 3</td>
+            <td>Shopping & Departure</td>
+        </tr>
+    </table>
+
+    <h2 id="booking">Book Your Trip</h2>
+
+    <div class="form-container">
+        <form>
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="Email Address" required>
+            <select required>
+                <option value="">Select Destination</option>
+                <option>Paris</option>
+                <option>Maldives</option>
+                <option>Dubai</option>
+            </select>
+            <input type="date" required>
+            <button type="submit">Book Now</button>
+        </form>
+    </div>
+
+</div>
+
+<footer>
+    © 2026 Travel Explorer | Professional Travel Services
+</footer>
+
+</body>
+</html>
