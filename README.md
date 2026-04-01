@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Travel Explorer</title>
+    <title>Travel Website</title>
 
+    <!-- External CSS -->
     <link rel="stylesheet" href="style.css">
 
+    <!-- Internal CSS -->
     <style>
         body {
             margin: 0;
@@ -67,6 +67,14 @@
             height: 100%;
         }
 
+        .video-box {
+            margin: 20px auto;
+            background-color: #065f46;
+            padding: 15px;
+            border-radius: 12px;
+            width: 60%;
+        }
+
         table {
             width: 90%;
             margin: 20px auto;
@@ -82,7 +90,7 @@
             background-color: #065f46;
         }
 
-        ul, ol, dl {
+        ul, ol {
             text-align: left;
             width: 60%;
             margin: 20px auto;
@@ -117,188 +125,133 @@
             background-color: #022c22;
             padding: 15px;
             margin-top: 30px;
-        }
-
-        @media (max-width: 768px) {
-            nav {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            nav ul {
-                flex-direction: column;
-                gap: 10px;
-            }
-
-            .image-section {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .form-container {
-                width: 90%;
-            }
-
-            table, ul, ol, dl {
-                width: 100%;
-            }
+            text-align: center;
         }
     </style>
 </head>
 
 <body>
 
-<nav>
-    <h2 style="color:#bbf7d0;">Travel Explorer</h2>
-    <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#destinations">Destinations</a></li>
-        <li><a href="#packages">Packages</a></li>
-        <li><a href="#booking">Booking</a></li>
-    </ul>
-</nav>
+    <!-- Navigation -->
+    <nav>
+        <h2>Travel Kenya</h2>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Destinations</a></li>
+            <li><a href="#">Bookings</a></li>
+        </ul>
+    </nav>
 
-<div class="container">
+    <!-- Content -->
+    <div class="container">
 
-    <h1 style="color:#bbf7d0;">Explore The World With Us</h1>
+        <h1 style="color:#a7f3d0;">Explore Amazing Destinations</h1>
 
-    <p>
-        Traveling gives you the opportunity to experience new cultures, discover breathtaking landscapes,
-        and enjoy unforgettable adventures. From luxurious beach resorts to exciting city tours,
-        we ensure your journey is comfortable, safe, and memorable.
-    </p>
+        <!-- Paragraphs -->
+        <p>
+            Traveling gives you the opportunity to experience different cultures, landscapes, 
+            and lifestyles. From the beautiful beaches of the coast to the wildlife safaris 
+            in national parks, every journey creates unforgettable memories and experiences.
+        </p>
 
-    <p>
-        Our travel agency offers carefully planned packages tailored to your needs. Whether you
-        love relaxation, adventure, or cultural exploration, we help you plan the perfect trip
-        with professional service and affordable prices.
-    </p>
+        <p>
+            Whether you are looking for adventure, relaxation, or cultural exploration, 
+            there is always something new to discover. Traveling helps you grow, learn, 
+            and appreciate the beauty of the world around you.
+        </p>
 
-    <h2 id="destinations">Top Destinations</h2>
+        <!-- Images -->
+        <h2>Popular Destinations</h2>
+        <div class="image-section">
 
-    <div class="image-section">
-        <div class="image-box">
-            <img src="https://source.unsplash.com/400x300/?paris" alt="Paris">
+            <div class="image-box">
+                <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e">
+            </div>
+
+            <div class="image-box">
+                <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470">
+            </div>
+
+            <div class="image-box">
+                <img src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b">
+            </div>
+
+            <div class="image-box">
+                <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
+            </div>
+
+            <div class="image-box">
+                <img src="https://images.unsplash.com/photo-1493558103817-58b2924bce98">
+            </div>
+
         </div>
-        <div class="image-box">
-            <img src="https://source.unsplash.com/400x300/?maldives" alt="Maldives">
+
+        <!-- Videos -->
+        <h2>Travel Videos</h2>
+
+        <div class="video-box">
+            <video width="100%" controls>
+                <source src="travel1.mp4" type="video/mp4">
+            </video>
         </div>
-        <div class="image-box">
-            <img src="https://source.unsplash.com/400x300/?dubai" alt="Dubai">
+
+        <div class="video-box">
+            <video width="100%" controls>
+                <source src="travel2.mp4" type="video/mp4">
+            </video>
         </div>
-        <div class="image-box">
-            <img src="https://source.unsplash.com/400x300/?newyork" alt="New York">
+
+        <!-- Table -->
+        <h2>Travel Packages</h2>
+        <table>
+            <tr>
+                <th>Destination</th>
+                <th>Price</th>
+                <th>Duration</th>
+            </tr>
+            <tr>
+                <td>Mombasa</td>
+                <td>KES 15,000</td>
+                <td>3 Days</td>
+            </tr>
+            <tr>
+                <td>Maasai Mara</td>
+                <td>KES 25,000</td>
+                <td>4 Days</td>
+            </tr>
+        </table>
+
+        <!-- List -->
+        <h2>Why Travel?</h2>
+        <ul>
+            <li>Explore new cultures</li>
+            <li>Relax and refresh</li>
+            <li>Create memories</li>
+        </ul>
+
+        <!-- Form -->
+        <div class="form-container">
+            <h2>Book a Trip</h2>
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Email" required>
+
+                <select>
+                    <option>Select Destination</option>
+                    <option>Mombasa</option>
+                    <option>Maasai Mara</option>
+                </select>
+
+                <button type="submit">Book Now</button>
+            </form>
         </div>
-        <div class="image-box">
-            <img src="https://source.unsplash.com/400x300/?tokyo" alt="Tokyo">
-        </div>
+
     </div>
 
-    <!-- UNORDERED LIST -->
-    <h2>Travel Essentials</h2>
-    <ul>
-        <li>Valid Passport</li>
-        <li>Travel Insurance</li>
-        <li>Comfortable Clothing</li>
-        <li>Camera & Power Bank</li>
-        <li>Travel Documents</li>
-    </ul>
-
-    <!-- ORDERED LIST -->
-    <h2>How to Plan Your Trip</h2>
-    <ol>
-        <li>Choose your destination</li>
-        <li>Compare travel packages</li>
-        <li>Book flights and hotels</li>
-        <li>Prepare travel documents</li>
-        <li>Pack and enjoy your journey</li>
-    </ol>
-
-    <!-- DESCRIPTION LIST -->
-    <h2>Package Types</h2>
-    <dl>
-        <dt><b>Standard Package</b></dt>
-        <dd>Affordable package including hotel and airport transfers.</dd>
-
-        <dt><b>Premium Package</b></dt>
-        <dd>Includes 5-star hotel, guided tours, and luxury transport.</dd>
-
-        <dt><b>Adventure Package</b></dt>
-        <dd>Best for hiking, safaris, and outdoor activities.</dd>
-    </dl>
-
-    <!-- TABLE 1 -->
-    <h2 id="packages">Travel Package Comparison</h2>
-    <table>
-        <tr>
-            <th>Destination</th>
-            <th>Duration</th>
-            <th>Hotel Rating</th>
-            <th>Price</th>
-        </tr>
-        <tr>
-            <td>Paris</td>
-            <td>5 Days</td>
-            <td>4 Star</td>
-            <td>$1200</td>
-        </tr>
-        <tr>
-            <td>Maldives</td>
-            <td>7 Days</td>
-            <td>5 Star</td>
-            <td>$2000</td>
-        </tr>
-        <tr>
-            <td>Dubai</td>
-            <td>4 Days</td>
-            <td>4 Star</td>
-            <td>$900</td>
-        </tr>
-    </table>
-
-    <!-- TABLE 2 -->
-    <h2>Sample 3-Day Itinerary</h2>
-    <table>
-        <tr>
-            <th>Day</th>
-            <th>Activity</th>
-        </tr>
-        <tr>
-            <td>Day 1</td>
-            <td>Arrival & City Tour</td>
-        </tr>
-        <tr>
-            <td>Day 2</td>
-            <td>Adventure & Sightseeing</td>
-        </tr>
-        <tr>
-            <td>Day 3</td>
-            <td>Shopping & Departure</td>
-        </tr>
-    </table>
-
-    <h2 id="booking">Book Your Trip</h2>
-
-    <div class="form-container">
-        <form>
-            <input type="text" placeholder="Full Name" required>
-            <input type="email" placeholder="Email Address" required>
-            <select required>
-                <option value="">Select Destination</option>
-                <option>Paris</option>
-                <option>Maldives</option>
-                <option>Dubai</option>
-            </select>
-            <input type="date" required>
-            <button type="submit">Book Now</button>
-        </form>
-    </div>
-
-</div>
-
-<footer>
-    © 2026 Travel Explorer | Professional Travel Services
-</footer>
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Travel Kenya | All Rights Reserved</p>
+    </footer>
 
 </body>
 </html>
