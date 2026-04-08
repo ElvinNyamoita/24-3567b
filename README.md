@@ -11,13 +11,13 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #064e3b;
+            background-color: #87CEEB;
             color: white;
             text-align: center;
         }
 
         nav {
-            background-color: #022c22;
+            background-color: #87CEEB;
             padding: 15px;
             display: flex;
             justify-content: space-between;
