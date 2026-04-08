@@ -1,146 +1,107 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
+    <title>Adventure is Therapeutic</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Travel Explorer</title>
 
+    <!-- External CSS -->
     <link rel="stylesheet" href="style.css">
 
+    <!-- Internal CSS -->
     <style>
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #064e3b;
-            color: white;
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(to right, #87ceeb, #e0f7fa);
         }
 
+        /* NAVBAR */
         nav {
-            background-color: #022c22;
-            padding: 15px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            position: sticky;
-            top: 0;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 20px;
-        }
-
-        nav ul li a {
+            background: #022c22;
+            padding: 15px;
             color: white;
-            text-decoration: none;
-            font-weight: bold;
         }
 
-        nav ul li a:hover {
-            color: #a7f3d0;
+        nav a {
+            color: white;
+            margin: 10px;
+            text-decoration: none;
+        }
+
+        /* HERO */
+        .hero {
+            background: url('https://picsum.photos/1200/500') no-repeat center/cover;
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-shadow: 2px 2px 5px black;
         }
 
         .container {
             width: 90%;
             margin: auto;
-            padding: 20px;
             text-align: center;
         }
 
-        .image-section {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+        /* PARAGRAPH CARDS */
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
             gap: 15px;
         }
 
-        .image-box {
-            width: 250px;
-            height: 180px;
-            border-radius: 12px;
-            overflow: hidden;
+        .card {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
         }
 
-        .image-box img {
+        /* MEDIA */
+        .media {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+            gap: 15px;
+        }
+
+        img, iframe {
             width: 100%;
-            height: 100%;
+            border-radius: 10px;
         }
 
+        /* TABLE */
         table {
-            width: 90%;
-            margin: 20px auto;
+            width: 100%;
             border-collapse: collapse;
+            margin-top: 20px;
         }
 
         th, td {
-            border: 1px solid white;
+            border: 1px solid black;
             padding: 10px;
         }
 
         th {
-            background-color: #065f46;
-        }
-
-        ul, ol, dl {
-            text-align: left;
-            width: 60%;
-            margin: 20px auto;
-        }
-
-        .form-container {
-            width: 60%;
-            margin: 30px auto;
-            background-color: #065f46;
-            padding: 20px;
-            border-radius: 12px;
-        }
-
-        input, select {
-            width: 90%;
-            padding: 10px;
-            margin: 10px 0;
-            border-radius: 5px;
-            border: none;
-        }
-
-        button {
-            padding: 10px 20px;
-            background-color: #022c22;
+            background: #0c4a6e;
             color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
         }
 
+        /* FOOTER */
         footer {
-            background-color: #022c22;
-            padding: 15px;
-            margin-top: 30px;
+            background: #022c22;
+            color: white;
+            padding: 20px;
+            margin-top: 20px;
         }
 
-        @media (max-width: 768px) {
+        @media(max-width:768px){
             nav {
                 flex-direction: column;
-                text-align: center;
-            }
-
-            nav ul {
-                flex-direction: column;
-                gap: 10px;
-            }
-
-            .image-section {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .form-container {
-                width: 90%;
-            }
-
-            table, ul, ol, dl {
-                width: 100%;
             }
         }
     </style>
@@ -148,158 +109,125 @@
 
 <body>
 
+<!-- NAV -->
 <nav>
-    <h2 style="color:#bbf7d0;">Travel Explorer</h2>
-    <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#destinations">Destinations</a></li>
-        <li><a href="#packages">Packages</a></li>
-        <li><a href="#booking">Booking</a></li>
-    </ul>
+    <h2>🌍 Adventure</h2>
+    <div>
+        <a href="#">Home</a>
+        <a href="#">Destinations</a>
+        <a href="#">Gallery</a>
+        <a href="#">Packages</a>
+        <a href="#">Contact</a>
+    </div>
 </nav>
+
+<!-- HERO -->
+<div class="hero">
+    <h1>Adventure is Therapeutic</h1>
+    <p>DISCOVER • EXPLORE • EXPERIENCE</p>
+</div>
 
 <div class="container">
 
-    <h1 style="color:#bbf7d0;">Explore The World With Us</h1>
+    <!-- PARAGRAPHS -->
+    <h2>WHY TRAVEL?</h2>
 
-    <p>
-        Traveling gives you the opportunity to experience new cultures, discover breathtaking landscapes,
-        and enjoy unforgettable adventures. From luxurious beach resorts to exciting city tours,
-        we ensure your journey is comfortable, safe, and memorable.
-    </p>
+    <div class="cards">
+        <div class="card">
+            <h3>Broadens Your Mind</h3>
+            <p>Travel exposes you to new cultures and ideas that expand your worldview.</p>
+        </div>
 
-    <p>
-        Our travel agency offers carefully planned packages tailored to your needs. Whether you
-        love relaxation, adventure, or cultural exploration, we help you plan the perfect trip
-        with professional service and affordable prices.
-    </p>
+        <div class="card">
+            <h3>Heals & Refreshes</h3>
+            <p>A change of environment reduces stress and improves mental wellbeing.</p>
+        </div>
 
-    <h2 id="destinations">Top Destinations</h2>
+        <div class="card">
+            <h3>Creates Memories</h3>
+            <p>Every journey becomes a story filled with unforgettable experiences.</p>
+        </div>
 
-    <div class="image-section">
-        <div class="image-box">
-            <img src="https://source.unsplash.com/400x300/?paris" alt="Paris">
+        <div class="card">
+            <h3>Connects to Nature</h3>
+            <p>Mountains, beaches, and wildlife help you reconnect with nature.</p>
         </div>
-        <div class="image-box">
-            <img src="https://source.unsplash.com/400x300/?maldives" alt="Maldives">
-        </div>
-        <div class="image-box">
-            <img src="https://source.unsplash.com/400x300/?dubai" alt="Dubai">
-        </div>
-        <div class="image-box">
-            <img src="https://source.unsplash.com/400x300/?newyork" alt="New York">
-        </div>
-        <div class="image-box">
-            <img src="https://source.unsplash.com/400x300/?tokyo" alt="Tokyo">
+
+        <div class="card">
+            <h3>Builds Confidence</h3>
+            <p>Travel challenges you and helps you grow into a stronger person.</p>
         </div>
     </div>
 
-    <!-- UNORDERED LIST -->
-    <h2>Travel Essentials</h2>
-    <ul>
-        <li>Valid Passport</li>
-        <li>Travel Insurance</li>
-        <li>Comfortable Clothing</li>
-        <li>Camera & Power Bank</li>
-        <li>Travel Documents</li>
-    </ul>
+    <!-- MEDIA -->
+    <h2>FEATURED EXPERIENCES</h2>
 
-    <!-- ORDERED LIST -->
-    <h2>How to Plan Your Trip</h2>
-    <ol>
-        <li>Choose your destination</li>
-        <li>Compare travel packages</li>
-        <li>Book flights and hotels</li>
-        <li>Prepare travel documents</li>
-        <li>Pack and enjoy your journey</li>
-    </ol>
+    <div class="media">
 
-    <!-- DESCRIPTION LIST -->
-    <h2>Package Types</h2>
-    <dl>
-        <dt><b>Standard Package</b></dt>
-        <dd>Affordable package including hotel and airport transfers.</dd>
+        <div class="card">
+            <iframe src="https://www.youtube.com/embed/Scxs7L0vhZ4"></iframe>
+            <p>Travel Moments</p>
+        </div>
 
-        <dt><b>Premium Package</b></dt>
-        <dd>Includes 5-star hotel, guided tours, and luxury transport.</dd>
+        <div class="card">
+            <img src="https://img.youtube.com/vi/Zn6o0rXhGkY/0.jpg">
+            <p>Tropical Beach</p>
+        </div>
 
-        <dt><b>Adventure Package</b></dt>
-        <dd>Best for hiking, safaris, and outdoor activities.</dd>
-    </dl>
+        <div class="card">
+            <iframe src="https://www.youtube.com/embed/Zn6o0rXhGkY"></iframe>
+            <p>Mountain Adventure</p>
+        </div>
 
-    <!-- TABLE 1 -->
-    <h2 id="packages">Travel Package Comparison</h2>
+        <div class="card">
+            <img src="https://picsum.photos/400/300">
+            <p>Wildlife Safari</p>
+        </div>
+
+    </div>
+
+    <!-- TABLE -->
+    <h2>TRAVEL PACKAGES</h2>
+
     <table>
         <tr>
             <th>Destination</th>
             <th>Duration</th>
-            <th>Hotel Rating</th>
+            <th>Highlights</th>
             <th>Price</th>
         </tr>
+
         <tr>
-            <td>Paris</td>
+            <td>Mombasa</td>
+            <td>3 Days</td>
+            <td>Beach, Water Sports</td>
+            <td>KES 15,000</td>
+        </tr>
+
+        <tr>
+            <td>Maasai Mara</td>
             <td>5 Days</td>
-            <td>4 Star</td>
-            <td>$1200</td>
+            <td>Wildlife Safari</td>
+            <td>KES 25,000</td>
         </tr>
-        <tr>
-            <td>Maldives</td>
-            <td>7 Days</td>
-            <td>5 Star</td>
-            <td>$2000</td>
-        </tr>
+
         <tr>
             <td>Dubai</td>
             <td>4 Days</td>
-            <td>4 Star</td>
-            <td>$900</td>
+            <td>City Tour</td>
+            <td>KES 55,000</td>
         </tr>
+
     </table>
-
-    <!-- TABLE 2 -->
-    <h2>Sample 3-Day Itinerary</h2>
-    <table>
-        <tr>
-            <th>Day</th>
-            <th>Activity</th>
-        </tr>
-        <tr>
-            <td>Day 1</td>
-            <td>Arrival & City Tour</td>
-        </tr>
-        <tr>
-            <td>Day 2</td>
-            <td>Adventure & Sightseeing</td>
-        </tr>
-        <tr>
-            <td>Day 3</td>
-            <td>Shopping & Departure</td>
-        </tr>
-    </table>
-
-    <h2 id="booking">Book Your Trip</h2>
-
-    <div class="form-container">
-        <form>
-            <input type="text" placeholder="Full Name" required>
-            <input type="email" placeholder="Email Address" required>
-            <select required>
-                <option value="">Select Destination</option>
-                <option>Paris</option>
-                <option>Maldives</option>
-                <option>Dubai</option>
-            </select>
-            <input type="date" required>
-            <button type="submit">Book Now</button>
-        </form>
-    </div>
 
 </div>
 
+<!-- FOOTER -->
 <footer>
-    © 2026 Travel Explorer | Professional Travel Services
+    <p>Adventure is Therapeutic</p>
+    <p>Email: info@travel.com | Nairobi, Kenya</p>
+    <p>© 2026 All Rights Reserved</p>
 </footer>
 
 </body>
 </html>
-
