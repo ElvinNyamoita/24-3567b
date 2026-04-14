@@ -4,230 +4,67 @@
     <title>Adventure is Therapeutic</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- External CSS -->
     <link rel="stylesheet" href="style.css">
-
-    <!-- Internal CSS -->
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Segoe UI', sans-serif;
-            background: linear-gradient(to right, #87ceeb, #e0f7fa);
-        }
-
-        /* NAVBAR */
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: #022c22;
-            padding: 15px;
-            color: white;
-        }
-
-        nav a {
-            color: white;
-            margin: 10px;
-            text-decoration: none;
-        }
-
-        /* HERO */
-        .hero {
-            background: url('https://picsum.photos/1200/500') no-repeat center/cover;
-            height: 60vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            text-shadow: 2px 2px 5px black;
-        }
-
-        .container {
-            width: 90%;
-            margin: auto;
-            text-align: center;
-        }
-
-        /* PARAGRAPH CARDS */
-        .cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
-            gap: 15px;
-        }
-
-        .card {
-            background: white;
-            padding: 15px;
-            border-radius: 10px;
-        }
-
-        /* MEDIA */
-        .media {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
-            gap: 15px;
-        }
-
-        img, iframe {
-            width: 100%;
-            border-radius: 10px;
-        }
-
-        /* TABLE */
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-
-        th, td {
-            border: 1px solid black;
-            padding: 10px;
-        }
-
-        th {
-            background: #0c4a6e;
-            color: white;
-        }
-
-        /* FOOTER */
-        footer {
-            background: #022c22;
-            color: white;
-            padding: 20px;
-            margin-top: 20px;
-        }
-
-        @media(max-width:768px){
-            nav {
-                flex-direction: column;
-            }
-        }
-    </style>
 </head>
 
 <body>
 
-<!-- NAV -->
 <nav>
     <h2>🌍 Adventure</h2>
     <div>
-        <a href="#">Home</a>
-        <a href="#">Destinations</a>
-        <a href="#">Gallery</a>
-        <a href="#">Packages</a>
-        <a href="#">Contact</a>
+        <a href="index.html">Home</a>
+        <a href="destinations.html">Destinations</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="packages.html">Packages</a>
+        <a href="contact.html">Contact</a>
     </div>
 </nav>
 
-<!-- HERO -->
-<div class="hero">
+<header class="hero fade">
     <h1>Adventure is Therapeutic</h1>
-    <p>DISCOVER • EXPLORE • EXPERIENCE</p>
-</div>
+    <p>Discover • Explore • Experience</p>
+</header>
 
 <div class="container">
 
     <!-- PARAGRAPHS -->
-    <h2>WHY TRAVEL?</h2>
+    <h2 class="fade">Why Travel?</h2>
 
     <div class="cards">
-        <div class="card">
-            <h3>Broadens Your Mind</h3>
-            <p>Travel exposes you to new cultures and ideas that expand your worldview.</p>
-        </div>
-
-        <div class="card">
-            <h3>Heals & Refreshes</h3>
-            <p>A change of environment reduces stress and improves mental wellbeing.</p>
-        </div>
-
-        <div class="card">
-            <h3>Creates Memories</h3>
-            <p>Every journey becomes a story filled with unforgettable experiences.</p>
-        </div>
-
-        <div class="card">
-            <h3>Connects to Nature</h3>
-            <p>Mountains, beaches, and wildlife help you reconnect with nature.</p>
-        </div>
-
-        <div class="card">
-            <h3>Builds Confidence</h3>
-            <p>Travel challenges you and helps you grow into a stronger person.</p>
-        </div>
+        <div class="card fade"><p>Travel broadens your mind and exposes you to new cultures.</p></div>
+        <div class="card fade"><p>It refreshes your mind and reduces stress.</p></div>
+        <div class="card fade"><p>Adventure builds confidence and resilience.</p></div>
+        <div class="card fade"><p>Nature helps you reconnect and find peace.</p></div>
+        <div class="card fade"><p>Every trip creates unforgettable memories.</p></div>
     </div>
 
     <!-- MEDIA -->
-    <h2>FEATURED EXPERIENCES</h2>
+    <h2 class="fade">Featured Experiences</h2>
 
     <div class="media">
-
-        <div class="card">
+        <div class="box fade">
             <iframe src="https://www.youtube.com/embed/Scxs7L0vhZ4"></iframe>
-            <p>Travel Moments</p>
         </div>
 
-        <div class="card">
+        <div class="box fade">
             <img src="https://img.youtube.com/vi/Zn6o0rXhGkY/0.jpg">
-            <p>Tropical Beach</p>
         </div>
 
-        <div class="card">
+        <div class="box fade">
             <iframe src="https://www.youtube.com/embed/Zn6o0rXhGkY"></iframe>
-            <p>Mountain Adventure</p>
         </div>
 
-        <div class="card">
+        <div class="box fade">
             <img src="https://picsum.photos/400/300">
-            <p>Wildlife Safari</p>
         </div>
-
     </div>
-
-    <!-- TABLE -->
-    <h2>TRAVEL PACKAGES</h2>
-
-    <table>
-        <tr>
-            <th>Destination</th>
-            <th>Duration</th>
-            <th>Highlights</th>
-            <th>Price</th>
-        </tr>
-
-        <tr>
-            <td>Mombasa</td>
-            <td>3 Days</td>
-            <td>Beach, Water Sports</td>
-            <td>KES 15,000</td>
-        </tr>
-
-        <tr>
-            <td>Maasai Mara</td>
-            <td>5 Days</td>
-            <td>Wildlife Safari</td>
-            <td>KES 25,000</td>
-        </tr>
-
-        <tr>
-            <td>Dubai</td>
-            <td>4 Days</td>
-            <td>City Tour</td>
-            <td>KES 55,000</td>
-        </tr>
-
-    </table>
 
 </div>
 
-<!-- FOOTER -->
 <footer>
-    <p>Adventure is Therapeutic</p>
-    <p>Email: info@travel.com | Nairobi, Kenya</p>
-    <p>© 2026 All Rights Reserved</p>
+    <p>© 2026 Adventure is Therapeutic</p>
 </footer>
 
+<script src="script.js"></script>
 </body>
 </html>
